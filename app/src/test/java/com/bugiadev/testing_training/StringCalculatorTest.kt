@@ -4,6 +4,7 @@ import org.junit.Assert
 import org.junit.Before
 import org.junit.Test
 import java.lang.Exception
+import java.lang.NumberFormatException
 
 /**
  * Created by Kiko on 2019-11-12 for testing-training.
@@ -40,7 +41,7 @@ class StringCalculatorTest {
     @Test
     fun returnsSumIfTheStringHasSeveralNumbers() = evaluateStringCalculator("1\n2\n3", 6)
 
-    @Test(expected = Exception::class)
+    @Test(expected = NumberFormatException::class)
     fun returnsExceptionIfTheStringIsNegative()  {
         evaluateStringCalculator("-2", -2)
     }

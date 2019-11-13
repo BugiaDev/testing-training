@@ -1,6 +1,7 @@
 package com.bugiadev.testing_training
 
 import java.lang.Exception
+import java.lang.NumberFormatException
 
 /**
  * Created by Kiko on 2019-11-12 for testing-training.
@@ -12,7 +13,7 @@ class StringCalculator {
             return 0
         }
         else if(number.startsWith("-")) {
-            throw Exception("negatives not allowed: $number")
+            throw NumberFormatException("negatives not allowed: $number")
         }
         else if(number.contains("\n") || number.contains(",")) {
             val array = number.split("\n", ",").toTypedArray()
